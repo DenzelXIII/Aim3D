@@ -47,10 +47,10 @@ public class Player : MonoBehaviour
 	
     void Movement()
     {
-        float h = speed * Input.GetAxis("PS4_P1_R3");
-        Vector3 movementVector = new Vector3(0, 0, h);
+        float v = speed * Input.GetAxis("Vertical") * Time.deltaTime;
+        Vector3 movementVector = new Vector3(0, 0, v);
         transform.Translate(movementVector);
-        print(h);
+        Debug.Log(v);
     }
 
 	// Update is called once per frame
