@@ -24,6 +24,7 @@ public class MouseLook : MonoBehaviour
     public float maxY = 60f;
 
     float rotationY = 0f;
+    public int joysticknum;
 
 	// Use this for initialization
 	void Start () {
@@ -38,6 +39,8 @@ public class MouseLook : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(xRotation, yRotation,0);*/
 
+         string joystickString = joysticknum.ToString();
+
         if (axes == RotationAxes.MouseXAndY)
         {
             float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
@@ -49,11 +52,11 @@ public class MouseLook : MonoBehaviour
         }
         else if (axes == RotationAxes.MouseX)
         {
-            transform.Rotate(0, Input.GetAxis("PS4_P1_R3_HORIZONTAL") * sensitivityX, 0);
+            transform.Rotate(0, Input.GetAxis("PS4R3HORIZONTAL"+joysticknum) * sensitivityX, 0);
         }
         else
         {
-            rotationY += Input.GetAxis("PS4_P1_R3_VERTICAL") * sensitivityY;
+            rotationY += Input.GetAxis("PS4R3VERTICAL"+joysticknum) * sensitivityY;
             rotationY = Mathf.Clamp(rotationY, minY, maxY);
 
             transform.localEulerAngles = new Vector3(rotationY, transform.localEulerAngles.y, 0);
