@@ -52,11 +52,11 @@ public class MouseLook : MonoBehaviour
         }
         else if (axes == RotationAxes.MouseX)
         {
-            transform.Rotate(0, Input.GetAxis("PS4R3HORIZONTAL"+joysticknum) * sensitivityX, 0);
+            transform.Rotate(0, Input.GetAxis("PS4R3HORIZONTAL"+joystickString) * sensitivityX, 0);
         }
         else
         {
-            rotationY += Input.GetAxis("PS4R3VERTICAL"+joysticknum) * sensitivityY;
+            rotationY += Input.GetAxis("PS4R3VERTICAL"+joystickString) * sensitivityY;
             rotationY = Mathf.Clamp(rotationY, minY, maxY);
 
             transform.localEulerAngles = new Vector3(rotationY, transform.localEulerAngles.y, 0);
