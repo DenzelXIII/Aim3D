@@ -26,7 +26,6 @@ public class Shoot : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             _fireMode++;
-            Debug.Log(_fireMode);
             if (_fireMode > 3)
             {
                 _fireMode = 1;

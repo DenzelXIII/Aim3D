@@ -5,6 +5,8 @@ public class BulletMovement : MonoBehaviour
 {
     [SerializeField]private float speed;
     [SerializeField]private float maxLifeTime;
+    [SerializeField]
+    private float _dmg = 1f;
     private float lifeTime = 0f;
     [SerializeField]private GameObject explosionPrefab;
 
@@ -26,10 +28,16 @@ public class BulletMovement : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    void OnCollisionEnter(Collision coll)
+    void OnTriggerEnter(Collider other)
     {
         //Instantiate(explosionPrefab, this.transform.position, this.transform.rotation);
-        Destroy(this.gameObject);
+        if (other.gameObject.tag == "Enemy")
+        {
+            Debug.Log("hit");
+            other.SendMessage("ApplyDamage", _dmg);
+            Destroy(this.gameObject);
+        }
+        
 
     }
 }
