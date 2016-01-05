@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -7,8 +8,11 @@ public class Player : MonoBehaviour
     public float jumpForce;
     private Rigidbody _rb;
     private bool _canJump;
-
     public int joystickNum;
+
+    public float health;
+    public Image healthbar;
+    public float waitTime;
 
 
 
@@ -75,8 +79,6 @@ public class Player : MonoBehaviour
     {
 
         string joyStickString = joystickNum.ToString();
-       // float v = speed * Input.GetAxis("Vertical" + joyStickString) * Time.deltaTime;
-        //Vector3 movementVector = new Vector3(0, 0, v);
         transform.Translate(Vector3.forward * speed * Time.deltaTime) ;
         
     }
@@ -91,6 +93,5 @@ public class Player : MonoBehaviour
 	void Update ()
     {
         FetchInput();
-        
     }
 }

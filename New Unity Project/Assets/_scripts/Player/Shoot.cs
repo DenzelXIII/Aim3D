@@ -5,6 +5,7 @@ public class Shoot : MonoBehaviour
 {
     [SerializeField]private GameObject bulletPrefab;
     [SerializeField]private GameObject muzzle;
+    public int joystickNum;
     // Use this for initialization
     void Start()
     {
@@ -14,7 +15,8 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        string joystickString = joystickNum.ToString();
+        if (Input.GetButtonDown("PS4R2_" + joystickString))
         {
             Quaternion rotation = Quaternion.Euler(Vector3.up * muzzle.transform.rotation.eulerAngles.y);
 

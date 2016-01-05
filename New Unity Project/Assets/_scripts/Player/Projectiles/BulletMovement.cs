@@ -6,9 +6,16 @@ public class BulletMovement : MonoBehaviour
     [SerializeField]private float speed;
     [SerializeField]private float maxLifeTime;
     private float lifeTime = 0f;
+    private float power;
     [SerializeField]private GameObject explosionPrefab;
+    private Tags _tags;
 
-    // Use this for initialization
+    
+    void Awake()
+    {
+        _tags = FindObjectOfType<Tags>();
+    }
+
     void Start()
     {
 
@@ -28,7 +35,10 @@ public class BulletMovement : MonoBehaviour
     }
     void OnCollisionEnter(Collision coll)
     {
-        //Instantiate(explosionPrefab, this.transform.position, this.transform.rotation);
+        if (coll.gameObject.tag == _tags.enemyTag)
+        {
+            coll.gameObject.SendMessage("TakeDamage", power);
+        }
         Destroy(this.gameObject);
 
     }
