@@ -9,9 +9,17 @@ public class Shoot : MonoBehaviour
     [SerializeField]private float _burstFireRate = 0.05f;
     [SerializeField]private float _burstFireNumber = 10;
 
+
     private bool _canRapidFire = false;
 
-    //fireMode 1 == single shot 2 == burstfire 3 == rapidfire
+    /*fireMode(s):
+    1 == single shot 
+    2 == burstfire 
+    3 == rapidfire
+     * 
+     * Switch with TAB
+    */
+
     private int _fireMode = 1;
     
     // Use this for initialization
@@ -23,6 +31,7 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             _fireMode++;
@@ -60,6 +69,10 @@ public class Shoot : MonoBehaviour
 
     private void Ishoot()
     {
+        RaycastHit hit;
+
+        Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity);
+
         Quaternion rotation = Quaternion.Euler(Vector3.up * muzzle.transform.rotation.eulerAngles.y);
 
         Instantiate(bulletPrefab, muzzle.transform.position, rotation);

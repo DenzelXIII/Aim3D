@@ -50,6 +50,11 @@ public class Player : MonoBehaviour
             print("Pressing Circle");
         }
 
+        else if (Input.GetButton("PS3_Circle_Button" + joyStickString))
+        {
+            print("Pressing PS3_Circle");
+        }
+
         if (Input.GetButton("PS4TRIANGLEBUTTON" + joyStickString))
         {
             print("Pressing Triangle");
