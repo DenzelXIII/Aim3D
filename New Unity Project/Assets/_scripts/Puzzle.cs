@@ -16,7 +16,7 @@ public class Puzzle : MonoBehaviour {
 
         if (_depositedPieces == _winningAmountPieces)
         {
-            Debug.Log("you won!");
+            Application.LoadLevel("WinScene");
         }
 	
 	}
