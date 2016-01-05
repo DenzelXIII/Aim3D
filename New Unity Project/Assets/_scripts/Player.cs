@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public float jumpForce;
     private Rigidbody _rb;
     private bool _canJump;
+    private int _puzzlePiecesHeld = 0;
 
     public int joystickNum;
 
@@ -97,5 +98,20 @@ public class Player : MonoBehaviour
     {
         FetchInput();
         
+    }
+
+    void PuzzlePieceCollected(int _collected)
+    {
+        _puzzlePiecesHeld += _collected;
+        Debug.Log(_puzzlePiecesHeld);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Puzzle")
+        {
+            other.SendMessage("DepositPuzzlePieces", _puzzlePiecesHeld);
+            _puzzlePiecesHeld = 0;
+        }
     }
 }
