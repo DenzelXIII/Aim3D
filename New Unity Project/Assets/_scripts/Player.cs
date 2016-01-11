@@ -97,7 +97,6 @@ public class Player : MonoBehaviour
 	void Update ()
     {
         FetchInput();
-        
     }
 
     void PuzzlePieceCollected(int _collected)
