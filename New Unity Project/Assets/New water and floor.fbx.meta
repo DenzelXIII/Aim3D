@@ -1,0 +1,164 @@
+fileFormatVersion: 2
+guid: cd9636ce7fb544f46ab05cbbd061b350
+timeCreated: 1450868965
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Mesh
+    100002: Mesh1
+    100004: Mesh10
+    100006: Mesh11
+    100008: Mesh12
+    100010: Mesh13
+    100012: Mesh14
+    100014: Mesh2
+    100016: Mesh3
+    100018: Mesh4
+    100020: Mesh5
+    100022: Mesh6
+    100024: Mesh7
+    100026: Mesh8
+    100028: Mesh9
+    100030: //RootNode
+    100032: surrounding_water:Mesh
+    100034: surrounding_waterfloor:Mesh
+    100036: water1:Mesh
+    400000: Mesh
+    400002: Mesh1
+    400004: Mesh10
+    400006: Mesh11
+    400008: Mesh12
+    400010: Mesh13
+    400012: Mesh14
+    400014: Mesh2
+    400016: Mesh3
+    400018: Mesh4
+    400020: Mesh5
+    400022: Mesh6
+    400024: Mesh7
+    400026: Mesh8
+    400028: Mesh9
+    400030: //RootNode
+    400032: surrounding_water:Mesh
+    400034: surrounding_waterfloor:Mesh
+    400036: water1:Mesh
+    2300000: Mesh
+    2300002: Mesh1
+    2300004: Mesh10
+    2300006: Mesh11
+    2300008: Mesh12
+    2300010: Mesh13
+    2300012: Mesh14
+    2300014: Mesh2
+    2300016: Mesh3
+    2300018: Mesh4
+    2300020: Mesh5
+    2300022: Mesh6
+    2300024: Mesh7
+    2300026: Mesh8
+    2300028: Mesh9
+    2300030: surrounding_water:Mesh
+    2300032: surrounding_waterfloor:Mesh
+    2300034: water1:Mesh
+    3300000: Mesh
+    3300002: Mesh1
+    3300004: Mesh10
+    3300006: Mesh11
+    3300008: Mesh12
+    3300010: Mesh13
+    3300012: Mesh14
+    3300014: Mesh2
+    3300016: Mesh3
+    3300018: Mesh4
+    3300020: Mesh5
+    3300022: Mesh6
+    3300024: Mesh7
+    3300026: Mesh8
+    3300028: Mesh9
+    3300030: surrounding_water:Mesh
+    3300032: surrounding_waterfloor:Mesh
+    3300034: water1:Mesh
+    4300000: surrounding_water:Mesh
+    4300002: surrounding_waterfloor:Mesh
+    4300004: Mesh
+    4300006: Mesh1
+    4300008: Mesh2
+    4300010: Mesh3
+    4300012: Mesh4
+    4300014: Mesh5
+    4300016: Mesh6
+    4300018: Mesh7
+    4300020: water1:Mesh
+    4300022: Mesh8
+    4300024: Mesh9
+    4300026: Mesh10
+    4300028: Mesh11
+    4300030: Mesh12
+    4300032: Mesh13
+    4300034: Mesh14
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 0
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

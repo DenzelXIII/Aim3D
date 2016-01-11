@@ -1,0 +1,835 @@
+fileFormatVersion: 2
+guid: 9db885b9464c3764aa5db563168aa1d3
+timeCreated: 1452001090
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: SaviorBody_Mesh
+    100004: SaviorHead_Mesh
+    100006: SaviorLArm_Mesh
+    100008: SaviorLFoot_Mesh
+    100010: SaviorLShoulder_Mesh
+    100012: SaviorRArm_Mesh
+    100014: SaviorRFoot_Mesh
+    100016: SaviorRShoulder_Mesh
+    400000: //RootNode
+    400002: SaviorBody_Mesh
+    400004: SaviorHead_Mesh
+    400006: SaviorLArm_Mesh
+    400008: SaviorLFoot_Mesh
+    400010: SaviorLShoulder_Mesh
+    400012: SaviorRArm_Mesh
+    400014: SaviorRFoot_Mesh
+    400016: SaviorRShoulder_Mesh
+    2300000: SaviorBody_Mesh
+    2300002: SaviorHead_Mesh
+    2300004: SaviorLArm_Mesh
+    2300006: SaviorLFoot_Mesh
+    2300008: SaviorLShoulder_Mesh
+    2300010: SaviorRArm_Mesh
+    2300012: SaviorRFoot_Mesh
+    2300014: SaviorRShoulder_Mesh
+    3300000: SaviorBody_Mesh
+    3300002: SaviorHead_Mesh
+    3300004: SaviorLArm_Mesh
+    3300006: SaviorLFoot_Mesh
+    3300008: SaviorLShoulder_Mesh
+    3300010: SaviorRArm_Mesh
+    3300012: SaviorRFoot_Mesh
+    3300014: SaviorRShoulder_Mesh
+    4300000: SaviorRArm_Mesh
+    4300002: SaviorRShoulder_Mesh
+    4300004: SaviorHead_Mesh
+    4300006: SaviorBody_Mesh
+    4300008: SaviorLArm_Mesh
+    4300010: SaviorLShoulder_Mesh
+    4300012: SaviorLFoot_Mesh
+    4300014: SaviorRFoot_Mesh
+    7400000: IdleToShoot
+    7400002: IdleToWalk
+    7400004: WalkLoop
+    7400006: WalkShootLoop
+    7400008: WalkAimLoop
+    7400010: Jump Wind Up
+    7400012: Jump Up
+    7400014: Jump Down
+    7400016: Jump Winddown
+    7400018: Hurt
+    7400020: DiePose
+    7400022: HurtStationary
+    7400024: JumpToWalkShoot
+    7400026: DieAnimation
+    7400028: HurtTest
+    7400030: IdleLoop
+    7400032: ShootLoop
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: IdleToShoot
+      takeName: C4D Animation Take
+      firstFrame: 180
+      lastFrame: 185
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SaviorBody_Mesh
+        weight: 1
+      - path: SaviorHead_Mesh
+        weight: 1
+      - path: SaviorLArm_Mesh
+        weight: 1
+      - path: SaviorLFoot_Mesh
+        weight: 1
+      - path: SaviorLShoulder_Mesh
+        weight: 1
+      - path: SaviorRArm_Mesh
+        weight: 1
+      - path: SaviorRFoot_Mesh
+        weight: 1
+      - path: SaviorRShoulder_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: IdleToWalk
+      takeName: C4D Animation Take
+      firstFrame: 47
+      lastFrame: 130
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SaviorBody_Mesh
+        weight: 1
+      - path: SaviorHead_Mesh
+        weight: 1
+      - path: SaviorLArm_Mesh
+        weight: 1
+      - path: SaviorLFoot_Mesh
+        weight: 1
+      - path: SaviorLShoulder_Mesh
+        weight: 1
+      - path: SaviorRArm_Mesh
+        weight: 1
+      - path: SaviorRFoot_Mesh
+        weight: 1
+      - path: SaviorRShoulder_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: WalkLoop
+      takeName: C4D Animation Take
+      firstFrame: 130
+      lastFrame: 174
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SaviorBody_Mesh
+        weight: 1
+      - path: SaviorHead_Mesh
+        weight: 1
+      - path: SaviorLArm_Mesh
+        weight: 1
+      - path: SaviorLFoot_Mesh
+        weight: 1
+      - path: SaviorLShoulder_Mesh
+        weight: 1
+      - path: SaviorRArm_Mesh
+        weight: 1
+      - path: SaviorRFoot_Mesh
+        weight: 1
+      - path: SaviorRShoulder_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: WalkShootLoop
+      takeName: C4D Animation Take
+      firstFrame: 270
+      lastFrame: 316
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SaviorBody_Mesh
+        weight: 1
+      - path: SaviorHead_Mesh
+        weight: 1
+      - path: SaviorLArm_Mesh
+        weight: 1
+      - path: SaviorLFoot_Mesh
+        weight: 1
+      - path: SaviorLShoulder_Mesh
+        weight: 1
+      - path: SaviorRArm_Mesh
+        weight: 1
+      - path: SaviorRFoot_Mesh
+        weight: 1
+      - path: SaviorRShoulder_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: WalkAimLoop
+      takeName: C4D Animation Take
+      firstFrame: 224
+      lastFrame: 270
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SaviorBody_Mesh
+        weight: 1
+      - path: SaviorHead_Mesh
+        weight: 1
+      - path: SaviorLArm_Mesh
+        weight: 1
+      - path: SaviorLFoot_Mesh
+        weight: 1
+      - path: SaviorLShoulder_Mesh
+        weight: 1
+      - path: SaviorRArm_Mesh
+        weight: 1
+      - path: SaviorRFoot_Mesh
+        weight: 1
+      - path: SaviorRShoulder_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump Wind Up
+      takeName: C4D Animation Take
+      firstFrame: 327
+      lastFrame: 337
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SaviorBody_Mesh
+        weight: 1
+      - path: SaviorHead_Mesh
+        weight: 1
+      - path: SaviorLArm_Mesh
+        weight: 1
+      - path: SaviorLFoot_Mesh
+        weight: 1
+      - path: SaviorLShoulder_Mesh
+        weight: 1
+      - path: SaviorRArm_Mesh
+        weight: 1
+      - path: SaviorRFoot_Mesh
+        weight: 1
+      - path: SaviorRShoulder_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump Up
+      takeName: C4D Animation Take
+      firstFrame: 337
+      lastFrame: 349
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SaviorBody_Mesh
+        weight: 1
+      - path: SaviorHead_Mesh
+        weight: 1
+      - path: SaviorLArm_Mesh
+        weight: 1
+      - path: SaviorLFoot_Mesh
+        weight: 1
+      - path: SaviorLShoulder_Mesh
+        weight: 1
+      - path: SaviorRArm_Mesh
+        weight: 1
+      - path: SaviorRFoot_Mesh
+        weight: 1
+      - path: SaviorRShoulder_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump Down
+      takeName: C4D Animation Take
+      firstFrame: 345
+      lastFrame: 359
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SaviorBody_Mesh
+        weight: 1
+      - path: SaviorHead_Mesh
+        weight: 1
+      - path: SaviorLArm_Mesh
+        weight: 1
+      - path: SaviorLFoot_Mesh
+        weight: 1
+      - path: SaviorLShoulder_Mesh
+        weight: 1
+      - path: SaviorRArm_Mesh
+        weight: 1
+      - path: SaviorRFoot_Mesh
+        weight: 1
+      - path: SaviorRShoulder_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump Winddown
+      takeName: C4D Animation Take
+      firstFrame: 359
+      lastFrame: 362
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SaviorBody_Mesh
+        weight: 1
+      - path: SaviorHead_Mesh
+        weight: 1
+      - path: SaviorLArm_Mesh
+        weight: 1
+      - path: SaviorLFoot_Mesh
+        weight: 1
+      - path: SaviorLShoulder_Mesh
+        weight: 1
+      - path: SaviorRArm_Mesh
+        weight: 1
+      - path: SaviorRFoot_Mesh
+        weight: 1
+      - path: SaviorRShoulder_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: DiePose
+      takeName: C4D Animation Take
+      firstFrame: 430
+      lastFrame: 430
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SaviorBody_Mesh
+        weight: 1
+      - path: SaviorHead_Mesh
+        weight: 1
+      - path: SaviorLArm_Mesh
+        weight: 1
+      - path: SaviorLFoot_Mesh
+        weight: 1
+      - path: SaviorLShoulder_Mesh
+        weight: 1
+      - path: SaviorRArm_Mesh
+        weight: 1
+      - path: SaviorRFoot_Mesh
+        weight: 1
+      - path: SaviorRShoulder_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: HurtStationary
+      takeName: C4D Animation Take
+      firstFrame: 368
+      lastFrame: 385
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SaviorBody_Mesh
+        weight: 1
+      - path: SaviorHead_Mesh
+        weight: 1
+      - path: SaviorLArm_Mesh
+        weight: 1
+      - path: SaviorLFoot_Mesh
+        weight: 1
+      - path: SaviorLShoulder_Mesh
+        weight: 1
+      - path: SaviorRArm_Mesh
+        weight: 1
+      - path: SaviorRFoot_Mesh
+        weight: 1
+      - path: SaviorRShoulder_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: JumpToWalkShoot
+      takeName: C4D Animation Take
+      firstFrame: 482
+      lastFrame: 503
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SaviorBody_Mesh
+        weight: 1
+      - path: SaviorHead_Mesh
+        weight: 1
+      - path: SaviorLArm_Mesh
+        weight: 1
+      - path: SaviorLFoot_Mesh
+        weight: 1
+      - path: SaviorLShoulder_Mesh
+        weight: 1
+      - path: SaviorRArm_Mesh
+        weight: 1
+      - path: SaviorRFoot_Mesh
+        weight: 1
+      - path: SaviorRShoulder_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: DieAnimation
+      takeName: C4D Animation Take
+      firstFrame: 397
+      lastFrame: 430
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SaviorBody_Mesh
+        weight: 1
+      - path: SaviorHead_Mesh
+        weight: 1
+      - path: SaviorLArm_Mesh
+        weight: 1
+      - path: SaviorLFoot_Mesh
+        weight: 1
+      - path: SaviorLShoulder_Mesh
+        weight: 1
+      - path: SaviorRArm_Mesh
+        weight: 1
+      - path: SaviorRFoot_Mesh
+        weight: 1
+      - path: SaviorRShoulder_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: HurtTest
+      takeName: C4D Animation Take
+      firstFrame: 368
+      lastFrame: 374
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SaviorBody_Mesh
+        weight: 1
+      - path: SaviorHead_Mesh
+        weight: 1
+      - path: SaviorLArm_Mesh
+        weight: 1
+      - path: SaviorLFoot_Mesh
+        weight: 1
+      - path: SaviorLShoulder_Mesh
+        weight: 1
+      - path: SaviorRArm_Mesh
+        weight: 1
+      - path: SaviorRFoot_Mesh
+        weight: 1
+      - path: SaviorRShoulder_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: IdleLoop
+      takeName: C4D Animation Take
+      firstFrame: 1
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SaviorBody_Mesh
+        weight: 1
+      - path: SaviorHead_Mesh
+        weight: 1
+      - path: SaviorLArm_Mesh
+        weight: 1
+      - path: SaviorLFoot_Mesh
+        weight: 1
+      - path: SaviorLShoulder_Mesh
+        weight: 1
+      - path: SaviorRArm_Mesh
+        weight: 1
+      - path: SaviorRFoot_Mesh
+        weight: 1
+      - path: SaviorRShoulder_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ShootLoop
+      takeName: C4D Animation Take
+      firstFrame: 189
+      lastFrame: 211
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SaviorBody_Mesh
+        weight: 1
+      - path: SaviorHead_Mesh
+        weight: 1
+      - path: SaviorLArm_Mesh
+        weight: 1
+      - path: SaviorLFoot_Mesh
+        weight: 1
+      - path: SaviorLShoulder_Mesh
+        weight: 1
+      - path: SaviorRArm_Mesh
+        weight: 1
+      - path: SaviorRFoot_Mesh
+        weight: 1
+      - path: SaviorRShoulder_Mesh
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

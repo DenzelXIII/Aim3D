@@ -10,10 +10,21 @@ public class BulletMovement : MonoBehaviour
     [SerializeField]
     
     private float lifeTime = 0f;
+<<<<<<< HEAD:New Unity Project/Assets/_scripts/Player/Projectiles/BulletMovement.cs
+    private float power;
+    [SerializeField]private GameObject explosionPrefab;
+    private Tags _tags;
+
+    
+    void Awake()
+    {
+        _tags = FindObjectOfType<Tags>();
+    }
+=======
     //[SerializeField]private GameObject explosionPrefab;
     
+>>>>>>> 77fee1a96227e703ee215ad388224eb79218d06c:New Unity Project/Assets/_scripts/BulletMovement.cs
 
-    // Use this for initialization
     void Start()
     {
        
@@ -33,6 +44,11 @@ public class BulletMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == _tags.enemyTag)
+        {
+            other.gameObject.SendMessage("TakeDamage", power);
+        }
+        Destroy(this.gameObject);
         //Instantiate(explosionPrefab, this.transform.position, this.transform.rotation);
         if (other.gameObject.tag == "Enemy")
         {
@@ -40,7 +56,5 @@ public class BulletMovement : MonoBehaviour
             other.SendMessage("ApplyDamage", _dmg);
             Destroy(this.gameObject);
         }
-        
-
     }
 }

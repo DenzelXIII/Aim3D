@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -7,9 +8,13 @@ public class Player : MonoBehaviour
     public float jumpForce;
     private Rigidbody _rb;
     private bool _canJump;
+<<<<<<< HEAD:New Unity Project/Assets/_scripts/Player/Player.cs
+=======
     private int _puzzlePiecesHeld = 0;
 
+>>>>>>> 77fee1a96227e703ee215ad388224eb79218d06c:New Unity Project/Assets/_scripts/Player.cs
     public int joystickNum;
+    public float health;
 
 
 
@@ -51,11 +56,6 @@ public class Player : MonoBehaviour
             print("Pressing Circle");
         }
 
-        else if (Input.GetButton("PS3_Circle_Button" + joyStickString))
-        {
-            print("Pressing PS3_Circle");
-        }
-
         if (Input.GetButton("PS4TRIANGLEBUTTON" + joyStickString))
         {
             print("Pressing Triangle");
@@ -81,8 +81,6 @@ public class Player : MonoBehaviour
     {
 
         string joyStickString = joystickNum.ToString();
-       // float v = speed * Input.GetAxis("Vertical" + joyStickString) * Time.deltaTime;
-        //Vector3 movementVector = new Vector3(0, 0, v);
         transform.Translate(Vector3.forward * speed * Time.deltaTime) ;
         
     }
