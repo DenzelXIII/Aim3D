@@ -7,7 +7,10 @@ public class BulletMovement : MonoBehaviour
     [SerializeField]private float maxLifeTime;
     [SerializeField]
     private float _dmg = 1f;
+    [SerializeField]
+    
     private float lifeTime = 0f;
+<<<<<<< HEAD:New Unity Project/Assets/_scripts/Player/Projectiles/BulletMovement.cs
     private float power;
     [SerializeField]private GameObject explosionPrefab;
     private Tags _tags;
@@ -17,16 +20,19 @@ public class BulletMovement : MonoBehaviour
     {
         _tags = FindObjectOfType<Tags>();
     }
+=======
+    //[SerializeField]private GameObject explosionPrefab;
+    
+>>>>>>> 77fee1a96227e703ee215ad388224eb79218d06c:New Unity Project/Assets/_scripts/BulletMovement.cs
 
     void Start()
     {
-
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-
         float delta = Time.deltaTime;
         transform.Translate(Vector3.forward * speed * delta);
         lifeTime += delta;
@@ -35,6 +41,7 @@ public class BulletMovement : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == _tags.enemyTag)

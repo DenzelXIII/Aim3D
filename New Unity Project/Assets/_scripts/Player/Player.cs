@@ -8,6 +8,11 @@ public class Player : MonoBehaviour
     public float jumpForce;
     private Rigidbody _rb;
     private bool _canJump;
+<<<<<<< HEAD:New Unity Project/Assets/_scripts/Player/Player.cs
+=======
+    private int _puzzlePiecesHeld = 0;
+
+>>>>>>> 77fee1a96227e703ee215ad388224eb79218d06c:New Unity Project/Assets/_scripts/Player.cs
     public int joystickNum;
     public float health;
 
@@ -90,5 +95,20 @@ public class Player : MonoBehaviour
 	void Update ()
     {
         FetchInput();
+    }
+
+    void PuzzlePieceCollected(int _collected)
+    {
+        _puzzlePiecesHeld += _collected;
+        Debug.Log(_puzzlePiecesHeld);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Puzzle")
+        {
+            other.SendMessage("DepositPuzzlePieces", _puzzlePiecesHeld);
+            _puzzlePiecesHeld = 0;
+        }
     }
 }
