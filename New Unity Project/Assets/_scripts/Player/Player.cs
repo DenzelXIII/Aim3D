@@ -9,10 +9,7 @@ public class Player : MonoBehaviour
     private Rigidbody _rb;
     private bool _canJump;
     public int joystickNum;
-
     public float health;
-    public Image healthbar;
-    public float waitTime;
 
 
 

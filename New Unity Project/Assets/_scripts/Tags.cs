@@ -10,6 +10,8 @@ public class Tags : MonoBehaviour
     public string KeyItemTag = "KeyItemTag";
     public string GroundTag = "GroundTag";
     public string WallTag = "WallTag";
+    public string strongBullet = "StrongBulletTag";
+    public string WeakBullet = "WeakBulletTag";
 
     public void GIveTag(string tag, GameObject go)
     {

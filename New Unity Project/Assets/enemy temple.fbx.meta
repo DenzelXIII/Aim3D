@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f1b2c994d19745e46b58aaf7479774bc
-timeCreated: 1449669112
+guid: c57bb34c5520f8e49870857d6363541f
+timeCreated: 1450272190
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Mesh
+    4300000: enemy_temple:Mesh
     9500000: //RootNode
   materials:
     importMaterials: 1

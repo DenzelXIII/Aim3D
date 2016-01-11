@@ -1,6 +1,7 @@
 ********************************************************************************
 *                             Initializing Cubiquity                           *
 ********************************************************************************
+<<<<<<< HEAD
 [14:56:40, Info   ]: Creating voxel database from 'C:/programmingProjects/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/5814C0EE.vdb'
 [14:57:13, Info   ]: Creating voxel database from 'C:/programmingProjects/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/5814C0EE.vdb'
 [14:59:23, Info   ]: Creating voxel database from 'C:/programmingProjects/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/5814C0EE.vdb'
@@ -8,6 +9,10 @@
 [14:59:46, Info   ]: Creating voxel database from 'C:/programmingProjects/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/5814C0EE.vdb'
 [15:08:26, Info   ]: Creating voxel database from 'C:/programmingProjects/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/5814C0EE.vdb'
 [15:08:32, Info   ]: Creating voxel database from 'C:/programmingProjects/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/5814C0EE.vdb'
+=======
+[14:31:43, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
+[15:21:12, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
+>>>>>>> 37a06f41520311507183780a6fa5c7eeb8fb3e89
 ********************************************************************************
 *                             Shutting down Cubiquity                          *
 ********************************************************************************
