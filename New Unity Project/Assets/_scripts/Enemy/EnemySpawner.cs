@@ -14,13 +14,17 @@ public class EnemySpawner : MonoBehaviour
 
     private int _enemyAmount = 3;
     public int maxEnemies;
-
+    private int _layermask;
+    private Tags _tags;
+    void Awake()
+    {
+        _tags = FindObjectOfType<Tags>();
+    }
     // Use this for initialization
     void Start ()
     {
-        InvokeRepeating("SpawnEnemies", startTimer, nextEnemyWaveTimer);
+        //InvokeRepeating("SpawnEnemies", startTimer, nextEnemyWaveTimer);
 	}
-
 
     void SpawnEnemies()
     {
@@ -34,10 +38,19 @@ public class EnemySpawner : MonoBehaviour
             _enemyAmount = maxEnemies;
         }
     }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == _tags.playerTag)
+        {
+            print("Player is in range, spawn enemies?");
+            //InvokeRepeating("SpawnEnemies", startTimer, nextEnemyWaveTimer);
+        }
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        //Collider Range[] = Physics.OverlapSphere(this.transform.position, 10);
+
 	}
 }

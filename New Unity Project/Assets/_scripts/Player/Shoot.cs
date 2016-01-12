@@ -3,14 +3,11 @@ using System.Collections;
 
 public class Shoot : MonoBehaviour
 {
-<<<<<<< HEAD:New Unity Project/Assets/_scripts/Player/Shoot.cs
     [SerializeField]private GameObject bulletPrefab;
     [SerializeField]private GameObject muzzle;
     public int joystickNum;
-=======
     [SerializeField]private GameObject _bulletPrefab;
     [SerializeField]private GameObject _muzzle;
->>>>>>> 77fee1a96227e703ee215ad388224eb79218d06c:New Unity Project/Assets/_scripts/Shoot.cs
     [SerializeField]private float _rapidFireRate = 0.04f;
     [SerializeField]private float _burstFireRate = 0.05f;
     [SerializeField]private float _burstFireNumber = 4;
@@ -39,14 +36,12 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD:New Unity Project/Assets/_scripts/Player/Shoot.cs
         string joystickString = joystickNum.ToString();
         if (Input.GetButtonDown("PS4R2_" + joystickString))
         {
             Ishoot();
         }
             
-=======
         BulletType();
 
         ShootingMode();
@@ -68,7 +63,6 @@ public class Shoot : MonoBehaviour
             _mat.SetColor("_Color", Color.blue);
         }
     }
->>>>>>> 77fee1a96227e703ee215ad388224eb79218d06c:New Unity Project/Assets/_scripts/Shoot.cs
 
     private void ShootingMode()
     {
@@ -114,13 +108,12 @@ public class Shoot : MonoBehaviour
 
         Quaternion rotation = Quaternion.Euler(Vector3.up * _muzzle.transform.rotation.eulerAngles.y);
 
-<<<<<<< HEAD:New Unity Project/Assets/_scripts/Player/Shoot.cs
         Instantiate(bulletPrefab, muzzle.transform.position, rotation);
 
         print("dsfsdfdsf");
-=======
+
         Instantiate(_bulletPrefab, _muzzle.transform.position, rotation);
->>>>>>> 77fee1a96227e703ee215ad388224eb79218d06c:New Unity Project/Assets/_scripts/Shoot.cs
+
     }
 
     IEnumerator BurstFire()
