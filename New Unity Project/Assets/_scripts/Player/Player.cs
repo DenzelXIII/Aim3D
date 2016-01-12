@@ -10,74 +10,37 @@ public class Player : MonoBehaviour
     public float speed;
     public float jumpForce;
     private Rigidbody _rb;
+<<<<<<< HEAD
     private bool _canJump;
     private int _puzzlePiecesHeld = 0;
 
+=======
+    protected bool _canJump;
+    private int _puzzlePiecesHeld = 0;
+>>>>>>> origin/master
     public int joystickNum;
+
+
     public float health;
+
+    private Tags _tags;
 
 
 
     void Awake()
     {
+        _tags = FindObjectOfType<Tags>();
         _rb = GetComponent<Rigidbody>();
     }
 
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start ()
+    {
+        _tags.GIveTag(_tags.playerTag, this.gameObject);
 	}
 
-    void FetchInput()
-    {
-
-        string joyStickString = joystickNum.ToString();
-        if (Input.GetButton("PS4OBUTTON" + joyStickString))
-        {
-            print("Pressing Square");
-
-        }
-
-        if (Input.GetButton("PS4XBUTTON" + joyStickString))
-        {
-            print("Pressing X");
-            _canJump = true;
-            if (_canJump)
-            {
-                Jump();
-                _canJump = false;
-            }
-
-        }
-
-        if (Input.GetButton("PS4OBUTTON" + joyStickString))
-        {
-            print("Pressing Circle");
-        }
-
-        if (Input.GetButton("PS4TRIANGLEBUTTON" + joyStickString))
-        {
-            print("Pressing Triangle");
-        }
-
-        if (Input.GetButton("PS4L1_" + joyStickString))
-        {
-            print("Pressing L1");
-        }
-
-        if (Input.GetButton("PS4R1_" + joyStickString))
-        {
-            print("Pressing R1");
-        }
-
-        if (Input.GetButton("PS4L3_" +joyStickString))
-        {
-            Movement();
-        }
-    }
-
-    void Movement()
+    protected void Movement()
     {
 
         string joyStickString = joystickNum.ToString();
@@ -85,19 +48,13 @@ public class Player : MonoBehaviour
         
     }
 
-    void Jump()
+    protected void Jump()
     {
         Vector3 jumpVector = new Vector3(0, jumpForce, 0);
         _rb.velocity = jumpVector;
     }
 
-	// Update is called once per frame
-	void Update ()
-    {
-        FetchInput();
-    }
-
-    void PuzzlePieceCollected(int _collected)
+    protected void PuzzlePieceCollected(int _collected)
     {
         _puzzlePiecesHeld += _collected;
         _puzzlePiecesText.text = "Puzzle Pieces: " + _puzzlePiecesHeld + "/4";

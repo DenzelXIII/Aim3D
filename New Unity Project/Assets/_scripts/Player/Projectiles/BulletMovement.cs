@@ -10,7 +10,10 @@ public class BulletMovement : MonoBehaviour
     [SerializeField]
     
     private float lifeTime = 0f;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
     private float power;
     [SerializeField]private GameObject explosionPrefab;
     private Tags _tags;

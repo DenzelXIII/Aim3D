@@ -43,10 +43,10 @@ public class Enemy : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == _tags.strongBullet)
+        if (other.gameObject.tag == _tags.strongBulletTag)
         {
             StrengthIncrease();
-        }else if(other.gameObject.tag == _tags.WeakBullet)
+        }else if(other.gameObject.tag == _tags.WeakBulletTag)
         {
             StrengthDecrease();
         }
