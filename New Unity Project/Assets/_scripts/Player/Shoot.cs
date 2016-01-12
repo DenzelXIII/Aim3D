@@ -4,21 +4,12 @@ using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
-<<<<<<< HEAD
-    [SerializeField]private GameObject _bulletPrefab;
-    [SerializeField]private GameObject _muzzle;
-    
     [SerializeField]private Text _ammoText;
 
     public int joystickNum;
-
-=======
-    [SerializeField]private GameObject bulletPrefab;
-    [SerializeField]private GameObject muzzle;
-    public int joystickNum;
     [SerializeField]private GameObject _bulletPrefab;
     [SerializeField]private GameObject _muzzle;
->>>>>>> origin/master
+
     [SerializeField]private float _rapidFireRate = 0.04f;
     [SerializeField]private float _burstFireRate = 0.05f;
     [SerializeField]private float _burstFireNumber = 4;
@@ -55,10 +46,7 @@ public class Shoot : MonoBehaviour
         {
             Ishoot();
         }
-<<<<<<< HEAD
-=======
-            
->>>>>>> origin/master
+
         BulletType();
 
         ShootingMode();
@@ -122,20 +110,11 @@ public class Shoot : MonoBehaviour
     {
         Quaternion rotation = Quaternion.Euler(Vector3.up * _muzzle.transform.rotation.eulerAngles.y);
 
-<<<<<<< HEAD
         Instantiate(_bulletPrefab, _muzzle.transform.position, rotation);
 
         _ammo -= 1;
 
         Debug.Log(_ammo);
-=======
-        Instantiate(bulletPrefab, muzzle.transform.position, rotation);
-
-        print("dsfsdfdsf");
-
-        Instantiate(_bulletPrefab, _muzzle.transform.position, rotation);
-
->>>>>>> origin/master
     }
 
     //burst fire delay

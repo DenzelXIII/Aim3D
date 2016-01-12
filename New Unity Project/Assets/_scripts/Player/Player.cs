@@ -10,14 +10,10 @@ public class Player : MonoBehaviour
     public float speed;
     public float jumpForce;
     private Rigidbody _rb;
-<<<<<<< HEAD
-    private bool _canJump;
-    private int _puzzlePiecesHeld = 0;
 
-=======
     protected bool _canJump;
     private int _puzzlePiecesHeld = 0;
->>>>>>> origin/master
+
     public int joystickNum;
 
 
