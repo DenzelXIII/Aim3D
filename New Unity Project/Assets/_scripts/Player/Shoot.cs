@@ -1,19 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
-<<<<<<< HEAD:New Unity Project/Assets/_scripts/Player/Shoot.cs
-    [SerializeField]private GameObject bulletPrefab;
-    [SerializeField]private GameObject muzzle;
-    public int joystickNum;
-=======
     [SerializeField]private GameObject _bulletPrefab;
     [SerializeField]private GameObject _muzzle;
->>>>>>> 77fee1a96227e703ee215ad388224eb79218d06c:New Unity Project/Assets/_scripts/Shoot.cs
+    
+    [SerializeField]private Text _ammoText;
+
+    public int joystickNum;
+
     [SerializeField]private float _rapidFireRate = 0.04f;
     [SerializeField]private float _burstFireRate = 0.05f;
     [SerializeField]private float _burstFireNumber = 4;
+
+    private int _ammo = 30;
 
     private Material _mat;
     private bool _canRapidFire = false;
@@ -33,43 +35,40 @@ public class Shoot : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        //get bullet material to change the color
         _mat = _bulletPrefab.GetComponent<MeshRenderer>().sharedMaterial;
     }
 
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD:New Unity Project/Assets/_scripts/Player/Shoot.cs
         string joystickString = joystickNum.ToString();
         if (Input.GetButtonDown("PS4R2_" + joystickString))
         {
             Ishoot();
         }
-            
-=======
         BulletType();
 
         ShootingMode();
     }
 
+    //changes bullet color and tag
     private void BulletType()
     {
         if (Input.GetKeyUp(KeyCode.Alpha1))
         {
             _bulletPrefab.tag = "FireBullet";
-            Debug.Log(_bulletPrefab.tag);
             _mat.SetColor("_Color", Color.red);
         }
 
         if (Input.GetKeyUp(KeyCode.Alpha2))
         {
             _bulletPrefab.tag = "WaterBullet";
-            Debug.Log(_bulletPrefab.tag);
             _mat.SetColor("_Color", Color.blue);
         }
     }
->>>>>>> 77fee1a96227e703ee215ad388224eb79218d06c:New Unity Project/Assets/_scripts/Shoot.cs
 
+    //changes shootingmode to single fire/burst fire/rapid fire
     private void ShootingMode()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -106,23 +105,19 @@ public class Shoot : MonoBehaviour
         }
     }
 
+    //shoot function
     private void Ishoot()
     {
-        RaycastHit hit;
-
-        Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity);
-
         Quaternion rotation = Quaternion.Euler(Vector3.up * _muzzle.transform.rotation.eulerAngles.y);
 
-<<<<<<< HEAD:New Unity Project/Assets/_scripts/Player/Shoot.cs
-        Instantiate(bulletPrefab, muzzle.transform.position, rotation);
-
-        print("dsfsdfdsf");
-=======
         Instantiate(_bulletPrefab, _muzzle.transform.position, rotation);
->>>>>>> 77fee1a96227e703ee215ad388224eb79218d06c:New Unity Project/Assets/_scripts/Shoot.cs
+
+        _ammo -= 1;
+
+        Debug.Log(_ammo);
     }
 
+    //burst fire delay
     IEnumerator BurstFire()
     {
         for (int i = 0; i < _burstFireNumber; i++)
@@ -132,6 +127,7 @@ public class Shoot : MonoBehaviour
         }
     }
 
+    //rapid fire rate
     IEnumerator RapidFire()
     {
         while (_canRapidFire == true)
