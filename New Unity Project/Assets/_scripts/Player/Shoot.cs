@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
-    [SerializeField]private Text _ammoText;
-
     public int joystickNum;
     [SerializeField]private GameObject _bulletPrefab;
     [SerializeField]private GameObject _muzzle;
@@ -13,21 +11,17 @@ public class Shoot : MonoBehaviour
     [SerializeField]private float _rapidFireRate = 0.04f;
     [SerializeField]private float _burstFireRate = 0.05f;
     [SerializeField]private float _burstFireNumber = 4;
-
-    private int _ammo = 30;
+    [SerializeField]private float _rechargeDelay = 0.25f;
+    [SerializeField]private float _ammo = 30;
 
     private Material _mat;
     private bool _canRapidFire = false;
+    private bool _isRecharging = false;
     private int _fireMode = 1;
+    
+    
 
-    /*
-     * fireMode(s):
-    1 == single shot 
-    2 == burstfire 
-    3 == rapidfire
-     * 
-     * Switch with TAB
-    */
+    
 
     
     
@@ -41,15 +35,17 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        string joystickString = joystickNum.ToString();
+        /*string joystickString = joystickNum.ToString();
         if (Input.GetButtonDown("PS4R2_" + joystickString))
         {
             Ishoot();
-        }
+        }*/
 
         BulletType();
 
         ShootingMode();
+
+        CheckForRecharge();
     }
 
     //changes bullet color and tag
@@ -68,7 +64,14 @@ public class Shoot : MonoBehaviour
         }
     }
 
-    //changes shootingmode to single fire/burst fire/rapid fire
+    /*changes shootingmode:
+    shootingmodes:
+    * 1 == single shot 
+    * 2 == burstfire 
+    * 3 == rapidfire
+    * 
+    * Switch with TAB
+    */
     private void ShootingMode()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -105,19 +108,53 @@ public class Shoot : MonoBehaviour
         }
     }
 
+    //check if can recharge weapon/weapon is recharging
+    private void CheckForRecharge()
+    {
+        if (_ammo <= 0)
+        {
+            StartCoroutine(BulletRecharge());
+            _isRecharging = true;
+        }
+
+        if (_ammo == 30)
+        {
+            _isRecharging = false;
+        }
+    }
     //shoot function
     private void Ishoot()
     {
-        Quaternion rotation = Quaternion.Euler(Vector3.up * _muzzle.transform.rotation.eulerAngles.y);
+        if (_ammo > 0 && _isRecharging == false)
+        {
+            Quaternion rotation = Quaternion.Euler(Vector3.up * _muzzle.transform.rotation.eulerAngles.y);
+            Instantiate(_bulletPrefab, _muzzle.transform.position, rotation);
+            //_ammo -= 1;
+            ChangeAmmo(-1);
+        }
+    }
 
-        Instantiate(_bulletPrefab, _muzzle.transform.position, rotation);
+    public void ChangeAmmo(float AmmoChange)
+    {
+        _ammo += AmmoChange;
+    }
 
-        _ammo -= 1;
-
-        Debug.Log(_ammo);
+    public float GetAmmo()
+    {
+        return _ammo;
     }
 
     //burst fire delay
+    IEnumerator BulletRecharge()
+    {
+        while (_isRecharging == true && _ammo < 30)
+        {
+            //_ammo += 1;
+            ChangeAmmo(1);
+            yield return new WaitForSeconds(_rechargeDelay);
+        }
+    }
+
     IEnumerator BurstFire()
     {
         for (int i = 0; i < _burstFireNumber; i++)

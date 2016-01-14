@@ -6,6 +6,11 @@ public class Player : MonoBehaviour
 {
     [SerializeField]
     private Text _puzzlePiecesText;
+
+    public Shoot shootScript;
+
+    public Image ammoBar;
+    public Image healthBar;
     
     public float speed;
     public float jumpForce;
@@ -18,6 +23,10 @@ public class Player : MonoBehaviour
 
 
     public float health;
+    public float healthBarOffSet = 10;
+
+    public float ammo;
+    public float ammoOffSet = 30;
 
     private Tags _tags;
 
@@ -33,7 +42,7 @@ public class Player : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        _tags.GIveTag(_tags.playerTag, this.gameObject);
+        _tags.GiveTag(_tags.playerTag, this.gameObject);
 	}
 
     protected void Movement()

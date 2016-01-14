@@ -10,8 +10,6 @@ public class BulletMovement : MonoBehaviour
     [SerializeField]
     
     private float lifeTime = 0f;
-
-    private float power;
     //[SerializeField]private GameObject explosionPrefab;
     private Tags _tags;
 
@@ -41,13 +39,8 @@ public class BulletMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == _tags.enemyTag)
-        {
-            other.gameObject.SendMessage("TakeDamage", power);
-        }
-        //Destroy(this.gameObject);
         //Instantiate(explosionPrefab, this.transform.position, this.transform.rotation);
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == _tags.enemyTag)
         {
             other.SendMessage("ApplyDamage", _dmg);
             Destroy(this.gameObject);
