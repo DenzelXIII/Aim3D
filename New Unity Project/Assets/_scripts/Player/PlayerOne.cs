@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerOne : Player
 {
-
-
+    
 	// Use this for initialization
 	void Start () {
-	
+        shootScript.GetComponent<Shoot>();
+        ammo = shootScript.GetAmmo();
 	}
 
     protected void FetchInput()
@@ -63,5 +64,7 @@ public class PlayerOne : Player
     {
         FetchInput();
         Movement();
+        healthBar.fillAmount = health / healthBarOffSet;
+        ammoBar.fillAmount = ammo / ammoOffSet;
 	}
 }

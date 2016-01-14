@@ -10,8 +10,7 @@ public class BulletMovement : MonoBehaviour
     [SerializeField]
     
     private float lifeTime = 0f;
-    private float power;
-    [SerializeField]private GameObject explosionPrefab;
+    //[SerializeField]private GameObject explosionPrefab;
     private Tags _tags;
 
     
@@ -19,7 +18,6 @@ public class BulletMovement : MonoBehaviour
     {
         _tags = FindObjectOfType<Tags>();
     }
-    //[SerializeField]private GameObject explosionPrefab;
     
 
     void Start()
@@ -43,13 +41,7 @@ public class BulletMovement : MonoBehaviour
     {
         if (other.gameObject.tag == _tags.enemyTag)
         {
-            other.gameObject.SendMessage("TakeDamage", power);
-        }
-        Destroy(this.gameObject);
-        if (other.gameObject.tag == "Enemy")
-        {
-            Debug.Log("hit");
-            other.SendMessage("TakeDamage", _dmg);
+            other.SendMessage("ApplyDamage", _dmg);
             Destroy(this.gameObject);
         }
     }

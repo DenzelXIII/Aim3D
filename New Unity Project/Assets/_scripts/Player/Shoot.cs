@@ -1,69 +1,77 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
-    [SerializeField]private GameObject bulletPrefab;
-    [SerializeField]private GameObject muzzle;
     public int joystickNum;
     [SerializeField]private GameObject _bulletPrefab;
     [SerializeField]private GameObject _muzzle;
+
     [SerializeField]private float _rapidFireRate = 0.04f;
     [SerializeField]private float _burstFireRate = 0.05f;
     [SerializeField]private float _burstFireNumber = 4;
+    [SerializeField]private float _rechargeDelay = 0.25f;
+    [SerializeField]private float _ammo = 30;
 
     private Material _mat;
     private bool _canRapidFire = false;
+    private bool _isRecharging = false;
     private int _fireMode = 1;
+    
+    
 
-    /*
-     * fireMode(s):
-    1 == single shot 
-    2 == burstfire 
-    3 == rapidfire
-     * 
-     * Switch with TAB
-    */
+    
 
     
     
     // Use this for initialization
     void Start()
     {
+        //get bullet material to change the color
         _mat = _bulletPrefab.GetComponent<MeshRenderer>().sharedMaterial;
     }
 
     // Update is called once per frame
     void Update()
     {
-        string joystickString = joystickNum.ToString();
+        /*string joystickString = joystickNum.ToString();
         if (Input.GetButtonDown("PS4R2_" + joystickString))
         {
             Ishoot();
-        }
-            
+        }*/
+
         BulletType();
 
         ShootingMode();
+
+        CheckForRecharge();
     }
 
+    //changes bullet color and tag
     private void BulletType()
     {
         if (Input.GetKeyUp(KeyCode.Alpha1))
         {
             _bulletPrefab.tag = "FireBullet";
-            Debug.Log(_bulletPrefab.tag);
             _mat.SetColor("_Color", Color.red);
         }
 
         if (Input.GetKeyUp(KeyCode.Alpha2))
         {
             _bulletPrefab.tag = "WaterBullet";
-            Debug.Log(_bulletPrefab.tag);
             _mat.SetColor("_Color", Color.blue);
         }
     }
 
+    /*changes shootingmode:
+    shootingmodes:
+    * 1 == single shot 
+    * 2 == burstfire 
+    * 3 == rapidfire
+    * 
+    * Switch with TAB
+    */
     private void ShootingMode()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -100,20 +108,51 @@ public class Shoot : MonoBehaviour
         }
     }
 
+    //check if can recharge weapon/weapon is recharging
+    private void CheckForRecharge()
+    {
+        if (_ammo <= 0)
+        {
+            StartCoroutine(BulletRecharge());
+            _isRecharging = true;
+        }
+
+        if (_ammo == 30)
+        {
+            _isRecharging = false;
+        }
+    }
+    //shoot function
     private void Ishoot()
     {
-        RaycastHit hit;
+        if (_ammo > 0 && _isRecharging == false)
+        {
+            Quaternion rotation = Quaternion.Euler(Vector3.up * _muzzle.transform.rotation.eulerAngles.y);
+            Instantiate(_bulletPrefab, _muzzle.transform.position, rotation);
+            //_ammo -= 1;
+            ChangeAmmo(-1);
+        }
+    }
 
-        Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity);
+    public void ChangeAmmo(float AmmoChange)
+    {
+        _ammo += AmmoChange;
+    }
 
-        Quaternion rotation = Quaternion.Euler(Vector3.up * _muzzle.transform.rotation.eulerAngles.y);
+    public float GetAmmo()
+    {
+        return _ammo;
+    }
 
-        Instantiate(bulletPrefab, muzzle.transform.position, rotation);
-
-        print("dsfsdfdsf");
-
-        Instantiate(_bulletPrefab, _muzzle.transform.position, rotation);
-
+    //burst fire delay
+    IEnumerator BulletRecharge()
+    {
+        while (_isRecharging == true && _ammo < 30)
+        {
+            //_ammo += 1;
+            ChangeAmmo(1);
+            yield return new WaitForSeconds(_rechargeDelay);
+        }
     }
 
     IEnumerator BurstFire()
@@ -125,6 +164,7 @@ public class Shoot : MonoBehaviour
         }
     }
 
+    //rapid fire rate
     IEnumerator RapidFire()
     {
         while (_canRapidFire == true)

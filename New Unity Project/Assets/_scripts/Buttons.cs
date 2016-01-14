@@ -15,7 +15,7 @@ public class Buttons : MonoBehaviour {
 
     public void PlayMainMenu()
     {
-        Application.LoadLevel("main");
+        Application.LoadLevel("truefinalscene");
     }
 
     public void CreditsMainMenu()
@@ -31,5 +31,10 @@ public class Buttons : MonoBehaviour {
     public void BackToMainMenu()
     { 
         Application.LoadLevel("MainMenu");
+    }
+
+    public void HowToPlay()
+    {
+        Application.LoadLevel("HowToPlayScene");
     }
 }

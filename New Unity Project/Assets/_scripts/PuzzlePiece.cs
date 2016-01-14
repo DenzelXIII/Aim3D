@@ -21,7 +21,6 @@ public class PuzzlePiece : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("hit player");
             other.SendMessage("PuzzlePieceCollected", _numberOfPieces);
             Destroy(this.gameObject);
         }
