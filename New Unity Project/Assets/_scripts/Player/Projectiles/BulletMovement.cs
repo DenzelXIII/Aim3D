@@ -46,11 +46,10 @@ public class BulletMovement : MonoBehaviour
             other.gameObject.SendMessage("TakeDamage", power);
         }
         Destroy(this.gameObject);
-        //Instantiate(explosionPrefab, this.transform.position, this.transform.rotation);
         if (other.gameObject.tag == "Enemy")
         {
             Debug.Log("hit");
-            other.SendMessage("ApplyDamage", _dmg);
+            other.SendMessage("TakeDamage", _dmg);
             Destroy(this.gameObject);
         }
     }

@@ -50,15 +50,16 @@ public class PlayerTwo : Player {
             print("Pressing R1");
         }
 
-        if (Input.GetButton("PS4L3_" + joyStickString))
+        /*if (Input.GetButton("PS4L3_" + joyStickString))
         {
             Movement();
-        }
+        }*/
     }
 
     // Update is called once per frame
     void Update ()
     {
         FetchInput();
+        Movement();
 	}
 }

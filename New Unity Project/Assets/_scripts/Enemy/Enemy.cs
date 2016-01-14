@@ -1,10 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : MonoBehaviour
+{
     [SerializeField]private float _enemyHealth;
     [SerializeField] private float movementSpeed;
     private Tags _tags;
+    [SerializeField]
+    private Transform[] _targets;
+
+    public delegate void OnDeath();
+    public static event OnDeath EnemyDeath;
+
+
     // Use this for initialization
 
     void Awake()
@@ -12,31 +20,33 @@ public class Enemy : MonoBehaviour {
         _tags = FindObjectOfType<Tags>();
     }
 
-    void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    void Start ()
+    {
+        _tags.GiveTag(_tags.enemyTag, this.gameObject);
+        //EnemyDeath();
+    }
+
+    // Update is called once per frame
+    void Update ()
+    {
         if (_enemyHealth <= 0)
         {
             Destroy(this.gameObject);
         }
-	
 	}
 
-    void ApplyDamage(float _damage)
+    void TakeDamage(float _dmg)
     {
-        _enemyHealth -= _damage;
+        _enemyHealth = _enemyHealth - _dmg;
     }
 
-    void StrengthIncrease()
+    void GetStronger()
     {
         movementSpeed = movementSpeed + 1.5f;
         _enemyHealth = _enemyHealth + 20;
     }
 
-    void StrengthDecrease()
+    void GetWeakened()
     {
         movementSpeed = movementSpeed - 1.5f;
     }
@@ -45,10 +55,12 @@ public class Enemy : MonoBehaviour {
     {
         if (other.gameObject.tag == _tags.strongBulletTag)
         {
-            StrengthIncrease();
+            GetStronger();
+            print("speed: " + movementSpeed + "and health: " + _enemyHealth);
         }else if(other.gameObject.tag == _tags.WeakBulletTag)
         {
-            StrengthDecrease();
+            GetWeakened();
+            print("speed: " + movementSpeed + "and health: " + _enemyHealth);
         }
     }
 }

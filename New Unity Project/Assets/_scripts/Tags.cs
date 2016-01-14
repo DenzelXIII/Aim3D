@@ -14,7 +14,7 @@ public class Tags : MonoBehaviour
     public string WeakBulletTag = "WeakBulletTag";
     public string enemySpawnPointTag = "EnemySpawnPointTag";
 
-    public void GIveTag(string tag, GameObject go)
+    public void GiveTag(string tag, GameObject go)
     {
         go.tag = tag;
     }

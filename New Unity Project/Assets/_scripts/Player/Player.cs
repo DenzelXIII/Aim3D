@@ -15,11 +15,13 @@ public class Player : MonoBehaviour
     public float health;
 
     private Tags _tags;
+    private Animator _anim;
 
 
 
     void Awake()
     {
+        _anim = GetComponent<Animator>();
         _tags = FindObjectOfType<Tags>();
         _rb = GetComponent<Rigidbody>();
     }
@@ -28,15 +30,18 @@ public class Player : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        _tags.GIveTag(_tags.playerTag, this.gameObject);
+        _tags.GiveTag(_tags.playerTag, this.gameObject);
 	}
 
     protected void Movement()
     {
 
         string joyStickString = joystickNum.ToString();
-        transform.Translate(Vector3.forward * speed * Time.deltaTime) ;
-        
+
+        float h = Input.GetAxis("Vertical") * speed;
+        Vector3 movementVector = new Vector3(0, 0, h) * Time.deltaTime;
+        //transform.Translate(movementVector);
+        //_rb.velocity = movementVector;
     }
 
     protected void Jump()
@@ -60,3 +65,8 @@ public class Player : MonoBehaviour
         }
     }
 }
+
+
+
+
+

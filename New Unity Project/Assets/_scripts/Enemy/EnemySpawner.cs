@@ -7,50 +7,56 @@ public class EnemySpawner : MonoBehaviour
     private Transform[] spawnPoints;
     [SerializeField]
     private GameObject _enemy;
-    [SerializeField]
-    private float startTimer;
-    [SerializeField]
-    private float nextEnemyWaveTimer;
-
-    private int _enemyAmount = 3;
-    public int maxEnemies;
-    private int _layermask;
+    private int _enemyAmount;
+    public int maxEnemiesOnField;
+    private bool canSpawn;
     private Tags _tags;
+
     void Awake()
     {
         _tags = FindObjectOfType<Tags>();
     }
-    // Use this for initialization
-    void Start ()
+
+    void Start()
     {
-        //InvokeRepeating("SpawnEnemies", startTimer, nextEnemyWaveTimer);
-	}
+        canSpawn = true;
+    }
 
     void SpawnEnemies()
     {
-        for (int i = 0; i < _enemyAmount; i++)
+            if (canSpawn)
+            {
+                if (_enemyAmount < maxEnemiesOnField)
+                {
+                    print("spawn enemies");
+                    Instantiate(_enemy, spawnPoints[(Random.Range(0, spawnPoints.Length))].position, Quaternion.identity);
+                    _enemyAmount++;
+                }
+            }
+        if (_enemyAmount == maxEnemiesOnField)
         {
-            Instantiate(_enemy, spawnPoints[(Random.Range(0, spawnPoints.Length))].position, Quaternion.identity);
+            canSpawn = false;
+            print("stopped spawning enemies");
         }
-        _enemyAmount = _enemyAmount + 1;
-        if (_enemyAmount >= maxEnemies)
-        {
-            _enemyAmount = maxEnemies;
-        }
+    }
+
+    void EnemyCheck()
+    {
+        print("Current enemy amount: " + _enemyAmount);
+        _enemyAmount--;
+        print("New enemy amount: " + _enemyAmount);
+    }
+
+    void OnEnable()
+    {
+        Enemy.EnemyDeath += EnemyCheck;
     }
 
     void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == _tags.playerTag)
         {
-            print("Player is in range, spawn enemies?");
-            //InvokeRepeating("SpawnEnemies", startTimer, nextEnemyWaveTimer);
+            SpawnEnemies();
         }
     }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-
-	}
 }
