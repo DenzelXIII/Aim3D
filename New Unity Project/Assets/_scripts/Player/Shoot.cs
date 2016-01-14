@@ -14,9 +14,9 @@ public class Shoot : MonoBehaviour
     [SerializeField]private float _rechargeDelay = 0.25f;
     [SerializeField]private float _ammo = 30;
 
-    private Material _mat;
     private bool _canRapidFire = false;
     private bool _isRecharging = false;
+
     private int _fireMode = 1;
     
     
@@ -28,40 +28,21 @@ public class Shoot : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //get bullet material to change the color
-        _mat = _bulletPrefab.GetComponent<MeshRenderer>().sharedMaterial;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*string joystickString = joystickNum.ToString();
+        string joystickString = joystickNum.ToString();
         if (Input.GetButtonDown("PS4R2_" + joystickString))
         {
             Ishoot();
-        }*/
-
-        BulletType();
+        }
 
         ShootingMode();
 
         CheckForRecharge();
-    }
-
-    //changes bullet color and tag
-    private void BulletType()
-    {
-        if (Input.GetKeyUp(KeyCode.Alpha1))
-        {
-            _bulletPrefab.tag = "FireBullet";
-            _mat.SetColor("_Color", Color.red);
-        }
-
-        if (Input.GetKeyUp(KeyCode.Alpha2))
-        {
-            _bulletPrefab.tag = "WaterBullet";
-            _mat.SetColor("_Color", Color.blue);
-        }
     }
 
     /*changes shootingmode:

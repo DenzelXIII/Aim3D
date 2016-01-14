@@ -1,29 +1,12 @@
 ********************************************************************************
 *                             Initializing Cubiquity                           *
 ********************************************************************************
-[08:34:33, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[08:40:41, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[08:42:06, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[08:42:54, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[08:47:15, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[08:48:56, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[08:49:06, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[08:49:26, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[08:49:35, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[08:50:28, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[09:16:04, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[09:21:06, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[09:35:56, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[09:39:29, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[09:40:37, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[09:40:40, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[09:43:07, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[09:48:07, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[09:50:06, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[09:59:26, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[10:00:01, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[10:02:40, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
-[10:03:21, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
+[11:55:58, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
+[12:00:08, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
+[12:02:27, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
+[12:02:42, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
+[12:04:42, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
+[12:05:37, Info   ]: Creating voxel database from 'C:/Users/Benjamin/Documents/School/Bewijzenmap/Jaar_2/Periode_2/PRO_B/Aim3D/New Unity Project/Assets/StreamingAssets/Cubiquity/VoxelDatabases/62AC56C9.vdb'
 ********************************************************************************
 *                             Shutting down Cubiquity                          *
 ********************************************************************************
