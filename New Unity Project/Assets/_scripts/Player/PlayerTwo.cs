@@ -2,7 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class PlayerTwo : Player {
+public class PlayerTwo : Player 
+{
 
 	// Use this for initialization
 	void Start () {
@@ -65,5 +66,6 @@ public class PlayerTwo : Player {
         Movement();
         healthBar.fillAmount = health / healthBarOffSet;
         ammoBar.fillAmount = ammo / ammoOffSet;
+        soulBar.fillAmount = puzzlePiecesHeld / puzzlePiecesOffset;
 	}
 }

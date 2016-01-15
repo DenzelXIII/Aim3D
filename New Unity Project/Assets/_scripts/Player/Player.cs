@@ -11,16 +11,18 @@ public class Player : MonoBehaviour
 
     public Image ammoBar;
     public Image healthBar;
+    public Image soulBar;
     
     public float speed;
     public float jumpForce;
     private Rigidbody _rb;
 
     protected bool _canJump;
-    private int _puzzlePiecesHeld = 0;
+
+    public float puzzlePiecesHeld = 0;
+    public float puzzlePiecesOffset = 4;
 
     public int joystickNum;
-
 
     public float health;
     public float healthBarOffSet = 10;
@@ -66,16 +68,16 @@ public class Player : MonoBehaviour
 
     protected void PuzzlePieceCollected(int _collected)
     {
-        _puzzlePiecesHeld += _collected;
-        _puzzlePiecesText.text = "Puzzle Pieces: " + _puzzlePiecesHeld + "/4";
+        puzzlePiecesHeld += _collected;
+        _puzzlePiecesText.text = "Puzzle Pieces: " + puzzlePiecesHeld + "/4";
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Puzzle")
         {
-            other.SendMessage("DepositPuzzlePieces", _puzzlePiecesHeld);
-            _puzzlePiecesHeld = 0;
+            other.SendMessage("DepositPuzzlePieces", puzzlePiecesHeld);
+            puzzlePiecesHeld = 0;
         }
     }
 }
