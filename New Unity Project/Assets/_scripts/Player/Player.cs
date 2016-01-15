@@ -4,9 +4,6 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField]
-    private Text _puzzlePiecesText;
-
     public Shoot shootScript;
 
     public Image ammoBar;
@@ -69,7 +66,6 @@ public class Player : MonoBehaviour
     protected void PuzzlePieceCollected(int _collected)
     {
         puzzlePiecesHeld += _collected;
-        _puzzlePiecesText.text = "Puzzle Pieces: " + puzzlePiecesHeld + "/4";
     }
 
     void OnTriggerEnter(Collider other)
