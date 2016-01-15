@@ -34,12 +34,12 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        string joystickString = joystickNum.ToString();
+        /*string joystickString = joystickNum.ToString();
         if (Input.GetButtonDown("PS4R2_" + joystickString))
         {
             Ishoot();
         }
-
+        */
         ShootingMode();
 
         CheckForRecharge();

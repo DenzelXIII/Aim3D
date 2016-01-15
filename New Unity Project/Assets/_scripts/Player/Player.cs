@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Text _puzzlePiecesText;
 
-    public Shoot shootScript;
+    protected Shoot shootScript;
 
     public Image ammoBar;
     public Image healthBar;
@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     public float ammo;
     public float ammoOffSet = 30;
 
-    private Tags _tags;
+    protected Tags _tags;
     private Animator _anim;
 
 
@@ -38,13 +38,14 @@ public class Player : MonoBehaviour
         _anim = GetComponent<Animator>();
         _tags = FindObjectOfType<Tags>();
         _rb = GetComponent<Rigidbody>();
+        //shootScript.GetComponent<Shoot>();
     }
 
 
 	// Use this for initialization
 	void Start ()
     {
-        _tags.GiveTag(_tags.playerTag, this.gameObject);
+        
 	}
 
     protected void Movement()
@@ -68,6 +69,15 @@ public class Player : MonoBehaviour
     {
         _puzzlePiecesHeld += _collected;
         _puzzlePiecesText.text = "Puzzle Pieces: " + _puzzlePiecesHeld + "/4";
+    }
+
+    void TakeDamage(int damageReceived)
+    {
+        health = health - damageReceived;
+        if (health <= 0)
+        {
+            print("Player died, game over");
+        }
     }
 
     void OnTriggerEnter(Collider other)

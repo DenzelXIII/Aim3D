@@ -4,10 +4,10 @@ using System.Collections;
 
 public class PlayerOne : Player
 {
-    
 	// Use this for initialization
-	void Start () {
-        shootScript.GetComponent<Shoot>();
+	void Start ()
+    {
+        shootScript = GetComponent<Shoot>();
         ammo = shootScript.GetAmmo();
 	}
 

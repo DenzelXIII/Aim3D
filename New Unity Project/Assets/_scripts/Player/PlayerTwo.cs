@@ -2,11 +2,12 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class PlayerTwo : Player {
-
-	// Use this for initialization
-	void Start () {
-        shootScript.GetComponent<Shoot>();
+public class PlayerTwo : Player
+{
+    // Use this for initialization
+    void Start ()
+    {
+        shootScript = GetComponent<Shoot>();
         ammo = shootScript.GetAmmo();
 	}
 
