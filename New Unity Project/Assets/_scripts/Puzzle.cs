@@ -24,6 +24,5 @@ public class Puzzle : MonoBehaviour {
     void DepositPuzzlePieces(int _depositPieces)
     {
         _depositedPieces += _depositPieces;
-        Debug.Log(_depositedPieces);
     }
 }

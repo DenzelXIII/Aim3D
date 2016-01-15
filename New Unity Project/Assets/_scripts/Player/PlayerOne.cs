@@ -66,5 +66,6 @@ public class PlayerOne : Player
         Movement();
         healthBar.fillAmount = health / healthBarOffSet;
         ammoBar.fillAmount = ammo / ammoOffSet;
+        soulBar.fillAmount = puzzlePiecesHeld / puzzlePiecesOffset;
 	}
 }
