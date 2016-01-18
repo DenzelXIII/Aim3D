@@ -17,7 +17,6 @@ public class Enemy : MonoBehaviour
     {
         _tags = FindObjectOfType<Tags>();
         _anim = GetComponent<Animator>();
-        Debug.Log("hello from enemy");
     }
 
     void Start ()
