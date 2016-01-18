@@ -8,7 +8,6 @@ public class PlayerOne : Player
 	void Start ()
     {
         shootScript = GetComponent<Shoot>();
-        ammo = shootScript.GetAmmo();
 	}
 
     protected void FetchInput()
@@ -66,5 +65,6 @@ public class PlayerOne : Player
         FetchInput();
         Movement();
         PlayerUI();
+        ammo = shootScript.GetAmmo();
 	}
 }

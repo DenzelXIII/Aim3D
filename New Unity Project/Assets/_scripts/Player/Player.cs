@@ -4,9 +4,6 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField]
-    private Text _puzzlePiecesText;
-
     protected Shoot shootScript;
 
     public Image ammoBar;
@@ -60,7 +57,7 @@ public class Player : MonoBehaviour
         _rb.velocity = jumpVector;
     }
 
-    protected void PuzzlePieceCollected(int _collected)
+    protected void PuzzlePieceCollected(float _collected)
     {
         puzzlePiecesHeld += _collected;
     }
