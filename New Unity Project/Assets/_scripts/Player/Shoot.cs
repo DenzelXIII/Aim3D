@@ -2,17 +2,20 @@
 using System.Collections;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class Shoot : MonoBehaviour
 {
     public int joystickNum;
     [SerializeField]private GameObject _bulletPrefab;
     [SerializeField]private GameObject _muzzle;
 
-    [SerializeField]private float _rapidFireRate = 0.04f;
-    [SerializeField]private float _burstFireRate = 0.05f;
-    [SerializeField]private float _burstFireNumber = 4;
+    private float _rapidFireRate = 0.08f;
+    private float _burstFireRate = 0.08f;
+    private float _burstFireNumber = 3;
     [SerializeField]private float _rechargeDelay = 0.25f;
     [SerializeField]private float _ammo = 30;
+
+    private AudioSource _shotSound;
 
     private bool _canRapidFire = false;
     private bool _isRecharging = false;
@@ -28,7 +31,7 @@ public class Shoot : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
+        _shotSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -110,7 +113,8 @@ public class Shoot : MonoBehaviour
         {
             Quaternion rotation = Quaternion.Euler(Vector3.up * _muzzle.transform.rotation.eulerAngles.y);
             Instantiate(_bulletPrefab, _muzzle.transform.position, rotation);
-            //_ammo -= 1;
+            _shotSound.Stop();
+            _shotSound.Play();
             ChangeAmmo(-1);
         }
     }
@@ -130,7 +134,6 @@ public class Shoot : MonoBehaviour
     {
         while (_isRecharging == true && _ammo < 30)
         {
-            //_ammo += 1;
             ChangeAmmo(1);
             yield return new WaitForSeconds(_rechargeDelay);
         }

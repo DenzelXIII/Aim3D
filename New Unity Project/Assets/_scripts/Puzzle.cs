@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Puzzle : MonoBehaviour {
 
-    private int _depositedPieces = 0;
-    private int _winningAmountPieces = 4;
+    private float _depositedPieces = 0;
+    private float _winningAmountPieces = 4;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +21,7 @@ public class Puzzle : MonoBehaviour {
 	
 	}
 
-    void DepositPuzzlePieces(int _depositPieces)
+    void DepositPuzzlePieces(float _depositPieces)
     {
         _depositedPieces += _depositPieces;
     }
