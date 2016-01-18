@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     public float ammoOffSet = 30;
 
     protected Tags _tags;
-    private Animator _anim;
+    protected Animator _anim;
 
 
 
@@ -42,13 +42,6 @@ public class Player : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         //shootScript.GetComponent<Shoot>();
     }
-
-
-	// Use this for initialization
-	void Start ()
-    {
-        
-	}
 
     protected void Movement()
     {
@@ -83,6 +76,7 @@ public class Player : MonoBehaviour
 
     protected void PlayerUI()
     {
+        
         healthBar.fillAmount = health / healthBarOffSet;
         ammoBar.fillAmount = ammo / ammoOffSet;
         soulBar.fillAmount = puzzlePiecesHeld / puzzlePiecesOffset;

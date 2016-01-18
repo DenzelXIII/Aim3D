@@ -40,6 +40,7 @@ public class EnemyFollow : Enemy
         {
             Debug.Log("what do");
             _anim.SetBool("isWalking", false);
+            _anim.SetBool("isAttacking",true);
            // _attack.isAttacking = true;
         }
     }

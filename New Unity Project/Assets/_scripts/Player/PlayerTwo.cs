@@ -27,6 +27,7 @@ public class PlayerTwo : Player
             _canJump = true;
             if (_canJump)
             {
+               // _anim.SetBool("isJumping", true);
                 Jump();
                 _canJump = false;
             }
