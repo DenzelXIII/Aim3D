@@ -4,11 +4,9 @@ using System.Collections;
 public class Enemy : MonoBehaviour
 {
     [SerializeField]private float _enemyHealth;
-    [SerializeField] private float movementSpeed;
-    private Tags _tags;
-    [SerializeField]
-    private Transform[] _targets;
-
+    protected Tags _tags;
+    protected Animator _anim;
+    private bool _isAttacking;
     public delegate void OnDeath();
     public static event OnDeath EnemyDeath;
 
@@ -18,6 +16,7 @@ public class Enemy : MonoBehaviour
     void Awake()
     {
         _tags = FindObjectOfType<Tags>();
+        _anim = GetComponent<Animator>();
     }
 
     void Start ()
@@ -42,13 +41,13 @@ public class Enemy : MonoBehaviour
 
     void GetStronger()
     {
-        movementSpeed = movementSpeed + 1.5f;
+        //
         _enemyHealth = _enemyHealth + 20;
     }
 
     void GetWeakened()
     {
-        movementSpeed = movementSpeed - 1.5f;
+        //
     }
 
     void OnTriggerEnter(Collider other)
@@ -56,11 +55,9 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.tag == _tags.strongBulletTag)
         {
             GetStronger();
-            print("speed: " + movementSpeed + "and health: " + _enemyHealth);
         }else if(other.gameObject.tag == _tags.WeakBulletTag)
         {
             GetWeakened();
-            print("speed: " + movementSpeed + "and health: " + _enemyHealth);
         }
     }
 }

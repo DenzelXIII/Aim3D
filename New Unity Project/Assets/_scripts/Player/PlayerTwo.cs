@@ -7,7 +7,7 @@ public class PlayerTwo : Player
 
 	// Use this for initialization
 	void Start () {
-        shootScript.GetComponent<Shoot>();
+        shootScript = GetComponent<Shoot>();
         ammo = shootScript.GetAmmo();
 	}
 
@@ -64,8 +64,6 @@ public class PlayerTwo : Player
     {
         FetchInput();
         Movement();
-        healthBar.fillAmount = health / healthBarOffSet;
-        ammoBar.fillAmount = ammo / ammoOffSet;
-        soulBar.fillAmount = puzzlePiecesHeld / puzzlePiecesOffset;
+        PlayerUI();
 	}
 }

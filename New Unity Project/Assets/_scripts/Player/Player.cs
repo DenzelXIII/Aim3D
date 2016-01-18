@@ -4,7 +4,10 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public Shoot shootScript;
+    [SerializeField]
+    private Text _puzzlePiecesText;
+
+    protected Shoot shootScript;
 
     public Image ammoBar;
     public Image healthBar;
@@ -27,7 +30,7 @@ public class Player : MonoBehaviour
     public float ammo;
     public float ammoOffSet = 30;
 
-    private Tags _tags;
+    protected Tags _tags;
     private Animator _anim;
 
 
@@ -37,13 +40,14 @@ public class Player : MonoBehaviour
         _anim = GetComponent<Animator>();
         _tags = FindObjectOfType<Tags>();
         _rb = GetComponent<Rigidbody>();
+        //shootScript.GetComponent<Shoot>();
     }
 
 
 	// Use this for initialization
 	void Start ()
     {
-        _tags.GiveTag(_tags.playerTag, this.gameObject);
+        
 	}
 
     protected void Movement()
@@ -66,6 +70,22 @@ public class Player : MonoBehaviour
     protected void PuzzlePieceCollected(int _collected)
     {
         puzzlePiecesHeld += _collected;
+    }
+
+    void TakeDamage(int damageReceived)
+    {
+        health = health - damageReceived;
+        if (health <= 0)
+        {
+            print("Player died, game over");
+        }
+    }
+
+    protected void PlayerUI()
+    {
+        healthBar.fillAmount = health / healthBarOffSet;
+        ammoBar.fillAmount = ammo / ammoOffSet;
+        soulBar.fillAmount = puzzlePiecesHeld / puzzlePiecesOffset;
     }
 
     void OnTriggerEnter(Collider other)

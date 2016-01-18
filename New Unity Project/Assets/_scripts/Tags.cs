@@ -4,6 +4,8 @@ using System.Collections;
 public class Tags : MonoBehaviour
 {
     public string playerTag = "Player";
+    public string playerOneTag = "PlayerOne";
+    public string playerTwoTag = "PlayerTwo";
     public string enemyTag = "EnemyTag";
     public string bulletProjectileTag = "BulletTag";
     public string collectableTag = "CollectableTag";
