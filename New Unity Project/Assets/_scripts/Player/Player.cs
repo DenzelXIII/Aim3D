@@ -81,6 +81,13 @@ public class Player : MonoBehaviour
         }
     }
 
+    protected void PlayerUI()
+    {
+        healthBar.fillAmount = health / healthBarOffSet;
+        ammoBar.fillAmount = ammo / ammoOffSet;
+        soulBar.fillAmount = puzzlePiecesHeld / puzzlePiecesOffset;
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Puzzle")

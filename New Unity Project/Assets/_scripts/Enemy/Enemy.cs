@@ -4,7 +4,8 @@ using System.Collections;
 public class Enemy : MonoBehaviour
 {
     [SerializeField]private float _enemyHealth;
-    private Tags _tags;
+    protected Tags _tags;
+    protected Animator _anim;
     private bool _isAttacking;
     public delegate void OnDeath();
     public static event OnDeath EnemyDeath;
@@ -15,6 +16,8 @@ public class Enemy : MonoBehaviour
     void Awake()
     {
         _tags = FindObjectOfType<Tags>();
+        _anim = GetComponent<Animator>();
+        Debug.Log("hello from enemy");
     }
 
     void Start ()

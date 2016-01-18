@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private Transform[] spawnPoints;
     [SerializeField]
-    private GameObject _enemy;
+    private GameObject[] _enemy;
     private int _enemyAmount;
     public int maxEnemiesOnField;
     private bool canSpawn;
@@ -29,7 +29,7 @@ public class EnemySpawner : MonoBehaviour
                 if (_enemyAmount < maxEnemiesOnField)
                 {
                     print("spawn enemies");
-                    Instantiate(_enemy, spawnPoints[(Random.Range(0, spawnPoints.Length))].position, Quaternion.identity);
+                    Instantiate(_enemy[(Random.Range(0,_enemy.Length))], spawnPoints[(Random.Range(0, spawnPoints.Length))].position, Quaternion.identity);
                     _enemyAmount++;
                 }
             }
@@ -54,7 +54,7 @@ public class EnemySpawner : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == _tags.playerTag)
+        if (other.gameObject.tag == _tags.playerOneTag || other.gameObject.tag == _tags.playerTwoTag)
         {
             SpawnEnemies();
         }

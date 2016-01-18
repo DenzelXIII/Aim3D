@@ -64,8 +64,6 @@ public class PlayerOne : Player
     {
         FetchInput();
         Movement();
-        healthBar.fillAmount = health / healthBarOffSet;
-        ammoBar.fillAmount = ammo / ammoOffSet;
-        soulBar.fillAmount = puzzlePiecesHeld / puzzlePiecesOffset;
+        PlayerUI();
 	}
 }
