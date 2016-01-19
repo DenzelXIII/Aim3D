@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BulletMovement : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     [SerializeField]private float speed;
     [SerializeField]private float maxLifeTime;
@@ -12,20 +12,16 @@ public class BulletMovement : MonoBehaviour
     //[SerializeField]private GameObject explosionPrefab;
     private Tags _tags;
 
+    public GameObject _explosionPrefab;
+
     
-    void Awake()
+    protected void Awake()
     {
         _tags = FindObjectOfType<Tags>();
     }
     
-
-    void Start()
-    {
-       
-    }
-
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         float delta = Time.deltaTime;
         transform.Translate(Vector3.forward * speed * delta);
@@ -36,11 +32,12 @@ public class BulletMovement : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == _tags.enemyTag)
         {
             other.SendMessage("ApplyDamage", _dmg);
+            Instantiate(_explosionPrefab, this.transform.position, this.transform.rotation);
             Destroy(this.gameObject);
         }
     }

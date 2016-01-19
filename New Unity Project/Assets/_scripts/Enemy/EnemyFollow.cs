@@ -10,10 +10,6 @@ public class EnemyFollow : Enemy
     private float maxDistance;
 
     private Transform target;
-    [SerializeField]
-    private string targetTag;
-
-	// Use this for initialization
 	void Start ()
     {
         target = GameObject.FindGameObjectWithTag(targetTag).transform;
@@ -31,10 +27,7 @@ public class EnemyFollow : Enemy
         }
         else if (Vector3.Distance(transform.position,target.position) <= maxDistance)
         {
-            Debug.Log("what do");
             _anim.SetBool("isWalking", false);
-            _anim.SetBool("isAttacking",true);
-           // _attack.isAttacking = true;
         }
     }
 	

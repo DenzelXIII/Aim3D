@@ -4,7 +4,10 @@ using System.Collections;
 public class Enemy : MonoBehaviour
 {
     [SerializeField]private float _enemyHealth;
+    [SerializeField]
+    private float enemyPower;
     protected Tags _tags;
+    public string targetTag;
     protected Animator _anim;
     private bool _isAttacking;
     public delegate void OnDeath();
@@ -39,25 +42,11 @@ public class Enemy : MonoBehaviour
         _enemyHealth = _enemyHealth - _dmg;
     }
 
-    void GetStronger()
+    void OnTriggerStay(Collider other)
     {
-        //
-        _enemyHealth = _enemyHealth + 20;
-    }
-
-    void GetWeakened()
-    {
-        //
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == _tags.strongBulletTag)
+        if (other.gameObject.tag == targetTag)
         {
-            GetStronger();
-        }else if(other.gameObject.tag == _tags.WeakBulletTag)
-        {
-            GetWeakened();
+            other.SendMessage("Damage", enemyPower);
         }
     }
 }

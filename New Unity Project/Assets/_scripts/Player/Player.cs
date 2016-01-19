@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
 
     protected Tags _tags;
     protected Animator _anim;
+    private bool isReceivingDamage;
 
 
 
@@ -37,7 +38,6 @@ public class Player : MonoBehaviour
         _anim = GetComponent<Animator>();
         _tags = FindObjectOfType<Tags>();
         _rb = GetComponent<Rigidbody>();
-        //shootScript.GetComponent<Shoot>();
     }
 
     protected void Movement()
@@ -48,7 +48,6 @@ public class Player : MonoBehaviour
         float h = Input.GetAxis("Vertical") * speed;
         Vector3 movementVector = new Vector3(0, 0, h) * Time.deltaTime;
         transform.Translate(movementVector);
-        //_rb.velocity = movementVector;
     }
 
     protected void Jump()
@@ -62,12 +61,14 @@ public class Player : MonoBehaviour
         puzzlePiecesHeld += _collected;
     }
 
-    void TakeDamage(int damageReceived)
+    void Damage(float damageReceived)
     {
-        health = health - damageReceived;
+        isReceivingDamage = true;
+        StartCoroutine(HealthDecrease());
+        print(health);
         if (health <= 0)
         {
-            print("Player died, game over");
+            Application.LoadLevel(2);
         }
     }
 
@@ -86,6 +87,16 @@ public class Player : MonoBehaviour
             other.SendMessage("DepositPuzzlePieces", puzzlePiecesHeld);
             puzzlePiecesHeld = 0;
         }
+    }
+
+    IEnumerator HealthDecrease()
+    {
+        while (isReceivingDamage)
+        {
+            health--;
+            yield return new WaitForSeconds(0.25f);
+        }
+
     }
 }
 

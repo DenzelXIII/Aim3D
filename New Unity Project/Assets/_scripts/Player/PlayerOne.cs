@@ -53,16 +53,15 @@ public class PlayerOne : Player
             print("Pressing R1");
         }
 
-        /*if (Input.GetButton("PS4L3_" + joyStickString))
+        if (Input.GetButton("PS4L3_" + joyStickString))
         {
             Movement();
-        }*/
+        }
     }
 
     // Update is called once per frame
     void Update ()
     {
-        _rb.velocity = Vector3.zero;
         FetchInput();
         Movement();
         PlayerUI();
