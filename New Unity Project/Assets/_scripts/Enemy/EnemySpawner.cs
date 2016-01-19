@@ -28,7 +28,6 @@ public class EnemySpawner : MonoBehaviour
             {
                 if (_enemyAmount < maxEnemiesOnField)
                 {
-                    print("spawn enemies");
                     Instantiate(_enemy[(Random.Range(0,_enemy.Length))], spawnPoints[(Random.Range(0, spawnPoints.Length))].position, Quaternion.identity);
                     _enemyAmount++;
                 }
@@ -36,15 +35,12 @@ public class EnemySpawner : MonoBehaviour
         if (_enemyAmount == maxEnemiesOnField)
         {
             canSpawn = false;
-            print("stopped spawning enemies");
         }
     }
 
     void EnemyCheck()
     {
-        print("Current enemy amount: " + _enemyAmount);
         _enemyAmount--;
-        print("New enemy amount: " + _enemyAmount);
     }
 
     void OnEnable()

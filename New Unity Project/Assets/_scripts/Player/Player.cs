@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     
     public float speed;
     public float jumpForce;
-    private Rigidbody _rb;
+    protected Rigidbody _rb;
 
     protected bool _canJump;
 
@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
 
         float h = Input.GetAxis("Vertical") * speed;
         Vector3 movementVector = new Vector3(0, 0, h) * Time.deltaTime;
-        //transform.Translate(movementVector);
+        transform.Translate(movementVector);
         //_rb.velocity = movementVector;
     }
 

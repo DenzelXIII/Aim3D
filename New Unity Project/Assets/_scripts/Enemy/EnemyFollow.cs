@@ -12,14 +12,7 @@ public class EnemyFollow : Enemy
     private Transform target;
     [SerializeField]
     private string targetTag;
-   // private EnemyAttack _attack;
 
-  /*  void Awake()
-    {
-        _tags = FindObjectOfType<Tags>();
-      //  _attack = GetComponent<EnemyAttack>();
-    }
-*/
 	// Use this for initialization
 	void Start ()
     {

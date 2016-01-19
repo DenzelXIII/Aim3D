@@ -7,9 +7,8 @@ public class BulletMovement : MonoBehaviour
     [SerializeField]private float maxLifeTime;
     [SerializeField]
     private float _dmg = 1f;
-    [SerializeField]
     
-    private float lifeTime = 0f;
+    private float lifeTime;
     //[SerializeField]private GameObject explosionPrefab;
     private Tags _tags;
 

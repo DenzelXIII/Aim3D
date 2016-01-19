@@ -62,6 +62,7 @@ public class PlayerOne : Player
     // Update is called once per frame
     void Update ()
     {
+        _rb.velocity = Vector3.zero;
         FetchInput();
         Movement();
         PlayerUI();

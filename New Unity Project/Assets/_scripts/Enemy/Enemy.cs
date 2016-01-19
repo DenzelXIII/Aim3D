@@ -22,7 +22,6 @@ public class Enemy : MonoBehaviour
     void Start ()
     {
         _tags.GiveTag(_tags.enemyTag, this.gameObject);
-        //EnemyDeath();
     }
 
     // Update is called once per frame
@@ -31,8 +30,9 @@ public class Enemy : MonoBehaviour
         if (_enemyHealth <= 0)
         {
             Destroy(this.gameObject);
+            EnemyDeath();
         }
-	}
+    }
 
     void TakeDamage(float _dmg)
     {
